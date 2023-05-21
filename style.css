@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* CSS */
+body {
+    background-color: #282a36;
+    background-image: linear-gradient(0deg, #282a36 100%);
+    font-family: "Nunito", sans-serif;
+}
+
+.text-family {
+    font-family: "Nunito", sans-serif;
+}
+
+.text-add {
+    font-weight: 600;
+}
+
+.button-user {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+
+    margin-bottom: 30px;
+
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 10px 15px 13px;
+    outline: 0;
+    border: 2px solid white;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    /* user-select: none;
+    -webkit-user-select: none; */
+    /* touch-action: manipulation; */
+}
+
+.button-user:after {
+    border-radius: 15px;
+    content: "";
+    background-color: #bd93f9;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.button-user:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+@media (min-width: 768px) {
+    .button-user {
+        padding: 10px 30px 10px;
+    }
+}
+
+tr:nth-child(even) {
+    background-color: #20222c;
+    color: #ffffff;
+}
+tr {
+    background-color: #ffffff;
+    color: #20222c;
+}
+tr:nth-child(1) {
+    background-color: transparent;
+    color: #ffffff;
+}
+th {
+    padding: 8px;
+}
+td {
+    text-align: left;
+    padding: 10px;
+}
+.container {
+    padding: 50px 80px 50px 80px;
+    box-sizing: border-box;
+}
+
+/* CSS */
+.button-edit {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+/* .button-edit:hover {
+    background-color: #000000;
+    color: white;
+} */
+
+.button-edit:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ec75c4,
+        #8be9fd,
+        #50fa7b,
+        #f1fa8c,
+        #ffb86c
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-edit 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-edit {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-edit:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* CSS */
+.button-delete {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin-left: 10px;
+    outline: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    box-shadow: #aeaeae 0 0 0 3px, transparent 0 0 0 0;
+}
+
+.button-delete:hover {
+    box-shadow: #ffffff 0 0 0 3px, transparent 0 0 0 0;
+    background-color: #000000;
+    color: white;
+}
+
+.delete {
+    text-decoration: none;
+}
+
+.btn-edit-delete {
+    display: flex;
+    justify-content: center;
+
+    margin: 10px;
+}
+.label {
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    background-image: url("WPP.jpg");
+    opacity: 0.9;
+    margin: 0px auto;
+
+    box-shadow: 6px 6px 6px 6px;
+    box-sizing: border-box;
+    width: 50%;
+
+    border: solid 3px #ffffff;
+
+    border-radius: 15px;
+    padding: 25px 25px;
+}
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* <!-- HTML !-->
+<button class="button-28" role="button">Button 28</button> */
+
+/* CSS */
+.button-submit {
+    appearance: none;
+    background-color: white;
+    border: 2px solid #1a1a1a;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #3b3b3b;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    /* margin-top: 10px; */
+    /* min-height: 20px; */
+    /* min-width: 0; */
+    outline: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    /* width: 100%; */
+    will-change: transform;
+}
+
+.button-submit:disabled {
+    pointer-events: none;
+}
+
+.button-submit:hover {
+    color: #fff;
+    background-color: #ec75c4;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-submit:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.submit {
+    display: flex;
+    justify-content: end;
+}
+/* CSS */
+.btn-login {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1a1a1a;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 20px;
+    min-width: 0;
+    outline: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+}
+
+.btn-login:disabled {
+    pointer-events: none;
+}
+
+.btn-login:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.btn-login:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+/* CSS */
+.button-info {
+    align-items: center;
+    background-color: #0a66c2;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+        "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+        "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 10px 10px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+        box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+        color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+
+.button-info:hover,
+.button-info:focus {
+    background-color: #16437e;
+    color: #ffffff;
+}
+
+.button-info:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, 0.7);
+}
+
+.button-info:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, 0.3);
+}
+.button-general-detail {
+    background-color: #ffffff;
+    border: 2px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+        "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 6px 6px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+        transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
+.button-general-detail:hover {
+    color: #8be9fd;
+    background-color: #282a36;
+}
+
+.button-general-edit {
+    background-color: #ffffff;
+    border: 2px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+        "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 6px 6px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+        transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
+.button-general-edit:hover {
+    background-color: #282a36;
+    color: white;
+}
+.button-general-delete {
+    background-color: #ffffff;
+    border: 2px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+        "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 6px 6px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+        transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
+.button-general-delete:hover {
+    background-color: #282a36;
+    color: #f55;
+}
+
+label {
+    /* background-color: white; */
+    /* border-radius: 5px; */
+    /* width: 25%; */
+    /* text-align: center; */
+    /* justify-content: center; */
+    color: #ffffff;
+}
+.d-flex {
+    display: flex;
+    gap: 10px;
+}
+
+/* CSS */
+.button-logout {
+    background-color: salmon;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+}
+
+.button-logout:hover,
+.button-logout:focus {
+    opacity: 0.75;
+}
+
+.kandel {
+    font-weight: 600;
+}
+
+.bening {
+    color: white;
+    background-color: #20222c;
+
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    /* border: 1px solid white; */
+}
+.bening:hover {
+    /* border-top: 1px solid white;
+    border-bottom: 1px solid white; */
+    background-color: black;
+    /* animation-delay: 4s; */
+    /* color: white; */
+}
+
+/* .img:hover {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+} */
+
+.back {
+    color: white;
+}
+.backinanger {
+    color: white;
+}
+
+.backinanger:hover {
+    color: #f2f2f2;
+    /* color: white; */
+    /* background-color: black; */
+}
